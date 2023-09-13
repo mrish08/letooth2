@@ -1,0 +1,38 @@
+[05-Oct-2019 00:26:36 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 118
+[05-Oct-2019 00:26:36 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 124
+[05-Oct-2019 00:29:24 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 118
+[05-Oct-2019 00:29:24 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 124
+[06-Oct-2019 01:28:15 Asia/Manila] PHP Notice:  Undefined index: user_age in /home/jancenco/public_html/login/admin/update-account.php on line 20
+[06-Oct-2019 01:28:15 Asia/Manila] PHP Notice:  Undefined index: bday in /home/jancenco/public_html/login/admin/update-account.php on line 21
+[06-Oct-2019 01:28:15 Asia/Manila] PHP Notice:  Undefined index: sex in /home/jancenco/public_html/login/admin/update-account.php on line 22
+[06-Oct-2019 01:28:15 Asia/Manila] PHP Notice:  Undefined index: civil_status in /home/jancenco/public_html/login/admin/update-account.php on line 23
+[06-Oct-2019 01:28:15 Asia/Manila] PHP Notice:  Undefined index: occupation in /home/jancenco/public_html/login/admin/update-account.php on line 24
+[06-Oct-2019 01:33:39 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 45
+[08-Jan-2020 10:42:30 Asia/Manila] PHP Warning:  trigger_error() expects at least 1 parameter, 0 given in /home/jancenco/public_html/config/functions.php on line 33
+[08-Jan-2020 10:42:30 Asia/Manila] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/jancenco/public_html/config/functions.php on line 34
+[02-Mar-2020 20:06:13 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 127
+[02-Mar-2020 20:06:13 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 133
+[04-Mar-2020 18:36:22 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 45
+[05-Mar-2020 10:23:43 Asia/Manila] PHP Notice:  Undefined variable: MiddleName in /home/jancenco/public_html/login/admin/update-account.php on line 28
+[05-Mar-2020 10:23:48 Asia/Manila] PHP Notice:  Undefined variable: MiddleName in /home/jancenco/public_html/login/admin/update-account.php on line 28
+[05-Mar-2020 13:24:04 Australia/Sydney] PHP Parse error:  syntax error, unexpected 'elseif' (T_ELSEIF) in /home/jancenco/public_html/login/admin/update-account.php on line 28
+[05-Mar-2020 10:26:12 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 43
+[05-Mar-2020 10:26:21 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 43
+[05-Mar-2020 10:44:49 Asia/Manila] PHP Notice:  Undefined index: MiddleName in /home/jancenco/public_html/login/admin/doctor.php on line 39
+[05-Mar-2020 10:45:14 Asia/Manila] PHP Notice:  Undefined index: MiddleName in /home/jancenco/public_html/login/admin/doctor.php on line 39
+[05-Mar-2020 10:45:46 Asia/Manila] PHP Notice:  Undefined index: MiddleName in /home/jancenco/public_html/login/admin/doctor.php on line 39
+[05-Mar-2020 10:48:41 Asia/Manila] PHP Notice:  Undefined index: MiddleName in /home/jancenco/public_html/login/admin/doctor.php on line 39
+[05-Mar-2020 11:19:52 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/appointment.php on line 170
+[05-Mar-2020 11:28:40 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/appointment.php on line 170
+[05-Mar-2020 11:46:06 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 127
+[05-Mar-2020 11:46:06 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 133
+[05-Mar-2020 11:52:55 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/appointment.php on line 170
+[05-Mar-2020 12:21:12 Asia/Manila] PHP Notice:  Undefined index: MiddleName in /home/jancenco/public_html/login/admin/doctor.php on line 39
+[05-Mar-2020 12:29:46 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 127
+[05-Mar-2020 12:29:46 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/jancenco/public_html/login/admin/add-service.php on line 133
+[08-Mar-2020 19:04:59 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 43
+[08-Mar-2020 19:12:45 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 43
+[08-Mar-2020 19:12:54 Asia/Manila] PHP Notice:  Undefined index: surgical_type in /home/jancenco/public_html/login/admin/update-account.php on line 43
+[07-Jul-2022 10:24:55 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/studycal/letooth.study-call.ph/login/admin/appointment.php on line 170
+[07-Jul-2022 10:25:03 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/studycal/letooth.study-call.ph/login/admin/appointment.php on line 170
+[07-Jul-2022 10:26:59 Asia/Manila] PHP Notice:  Undefined variable: getService in /home/studycal/letooth.study-call.ph/login/admin/appointment.php on line 170
