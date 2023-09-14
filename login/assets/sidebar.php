@@ -87,13 +87,36 @@ $count2 = mysqli_num_rows($sched2);
           </li>
 <?php if($_SESSION['UserRole'] == '0'):?>
   
-          <li class="nav-item">
+          <li class="nav-item has-treeview">
             <a href="general_appointment.php" class="nav-link" style="color:white;">
               <i class="nav-icon fa fa-calendar"></i>
               <p>
-                Appointment <span class="right badge badge-danger"><?php echo $count2;?></span>
+                Manage Appointments <span class="right badge badge-danger"></span>
+                <i class="right fa fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="color:white;">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Pending</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="color:white;">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Approved</p>
+                </a>
+              </li>
+              <?php if($_SESSION['ID'] == '1'):?>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="color:white;">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>No Show</p>
+                </a>
+              </li>
+            <?php endif;?>
+            </ul>
           </li>
   
           
@@ -109,23 +132,15 @@ $count2 = mysqli_num_rows($sched2);
               <li class="nav-item">
                 <a href="customer.php" class="nav-link" style="color:white;">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Customer Account</p>
+                  <p>Customer Profiles</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="doctor.php" class="nav-link" style="color:white;">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Doctor Account</p>
+                  <p>Doctor's Profile</p>
                 </a>
               </li>
-              <?php if($_SESSION['ID'] == '1'):?>
-              <li class="nav-item">
-                <a href="admin.php" class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Staff Account</p>
-                </a>
-              </li>
-            <?php endif;?>
             </ul>
           </li>
          
@@ -175,30 +190,36 @@ $count2 = mysqli_num_rows($sched2);
               <li class="nav-item">
                 <a href="" class="nav-link" style="color:white;" data-toggle="modal" data-target="#sched-report">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Schedule Report</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="print-report.php?option=1"  class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Client Report</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="print-report.php?option=2"  class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Doctor Report</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="print-report.php?option=3" class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Services Report</p>
+                  <p>Appointment Reports</p>
                 </a>
               </li>
             </ul>
           </li>
           <?php endif;?>
+
+          <li class="nav-item has-treeview" >
+            <a href="#" class="nav-link" style="color:white;">
+              <i class="nav-icon fa fa-users"></i>
+              <p>
+                Inventory
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="supplies.php" class="nav-link" style="color:white;">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>View Supplies</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="equipment.php" class="nav-link" style="color:white;">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>View Equipment</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           
 <?php endif;?>
 <?php if($_SESSION['UserRole'] == '2'):?>
