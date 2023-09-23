@@ -93,7 +93,7 @@
 <?php include'../assets/footer.php';?>
 </body>
 
-<div class="modal fade" id="addSupplies" style="width:100%;">
+<div class="modal fade" id="addInventory" style="width:100%;">
           <div class="modal-dialog modal-md">
             <div class="modal-content">
               <div class="modal-header">
@@ -104,16 +104,16 @@
               <div class="modal-body">
                 <form method="POST" action=""> 
                   <div class="mb-3">
-                  <label for="fileToUpload">Supplies Image</label><br>
+                  <label for="fileToUpload">InImage</label><br>
                   <input type="file" id="fileToUpload" name="fileToUpload">
                   </div>
                   <div class="mb-2">
-                  <label for="suppliesName">Name</label>
-                  <input class="form-control" type="text" name="suppliesName" id="suppliesName">
+                  <label for="asset_name">Name</label>
+                  <input class="form-control" type="text" name="asset_name" id="asset_name">
                   </div>
                   <div class="mb-3">
-                  <label for="suppliesQty">Quantity</label>
-                  <input class="form-control" type="number" name="suppliesQty" id="suppliesQty">
+                  <label for="asset_quantity">Quantity</label>
+                  <input class="form-control" type="number" name="asset_quantity" id="asset_quantity">
                   </div>
                   <div>
                     <button class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>

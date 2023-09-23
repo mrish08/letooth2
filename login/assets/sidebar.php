@@ -199,7 +199,7 @@ $count2 = mysqli_num_rows($sched2);
 
           <li class="nav-item has-treeview" >
             <a href="#" class="nav-link" style="color:white;">
-              <i class="nav-icon fa fa-users"></i>
+            <i class="fas fa-boxes"></i>
               <p>
                 Inventory
                 <i class="right fa fa-angle-left"></i>
