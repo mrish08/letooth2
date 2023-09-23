@@ -148,7 +148,7 @@
                   <span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
-                <form method="POST" action="insert-updated-equipment.php" enctype="multipart/form-data"> 
+                <form method="POST" action="" enctype="multipart/form-data"> 
                   <div class="mb-3">
                   <label for="fileToUpload">Equipment Image</label><br>
                   <input type="file" id="fileToUpload" name="fileToUpload">
@@ -214,7 +214,7 @@
               </div>
               <div class="modal-body">
                   <div id="updateFields">
-
+                    
                   </div>
                   <div class="d-flex justify-content-end gap-2">
                   <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
@@ -232,13 +232,24 @@
 <script>
 $(document).ready(function () {
 
-    $('#updateSubmitBtn').click(function (){
-        var updatedQty = $('#updateQty').val();
-        var equipmentId = $('#equipId').val();
-        $.ajax({
-          url: update
-        });
+  $('#updateSubmitBtn').click(function () {
+    var updatedQty = $('#updateEquipmentQty').val();
+    var equipmentId = $('#updateAssetId').val();
+
+    $.ajax({
+        url: 'insert-updated-equipment.php',
+        method: 'POST',
+        data: {
+            newQty: updatedQty,
+            equipId: equipmentId
+        },
+        success: function (result) {
+            alert(result);
+            location.reload();
+        }
     });
+});
+
 
     $('#submitBtn').click(function (){
 

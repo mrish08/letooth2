@@ -4,22 +4,22 @@ include '../../config/main_function.php';
 
     // Retrieve the data sent via AJAX
     $newQty = $_POST["newQty"];
-    $equipId = $_POST["equipId"];
+    $suppId = $_POST["suppliesId"];
 
     // Perform your processing here, e.g., update the database
     // Example: Update the equipment quantity in a hypothetical database
     // Replace this with your actual database update code
-    $success = updateEquipmentQuantity($equipId, $newQty);
+    $success = updateSuppliesQuantity($suppId, $newQty);
 
     // Prepare a response
     if ($success) {
-        echo "Equipment quantity updated successfully";
+        echo "Supplies quantity updated successfully";
     } else {
-        echo "Failed to update equipment quantity.";
+        echo "Failed to update supplies quantity.";
     }
 
 // Replace this function with your actual database update code
-function updateEquipmentQuantity($equipId, $newQty) {
+function updateSuppliesQuantity($suppId, $newQty) {
 
     $db_server = "localhost";
     $db_user = "root";
@@ -32,7 +32,7 @@ function updateEquipmentQuantity($equipId, $newQty) {
         die("Connection failed: " . $dbcon->connect_error);
     }
 
-    $query = "UPDATE asset SET ASSET_QUANTITY = '".$newQty."' WHERE ASSET_ID = '".$equipId."'";
+    $query = "UPDATE asset SET ASSET_QUANTITY = '".$newQty."' WHERE ASSET_ID = '".$suppId."'";
     $result = mysqli_query($dbcon, $query);
 
     return true;
