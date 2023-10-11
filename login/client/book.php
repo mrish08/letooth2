@@ -36,7 +36,8 @@
         "customer_id"       =>$_SESSION['ID'],
         "sched_status"      =>"1",
         "service_id"        =>$service_id,
-        "invoice_num"       =>rand(0,10000)
+        "invoice_num"       =>rand(0,10000),
+        "paypal_status"     =>"0"
       );
       SaveData("doctor_schedule",$insertSQL);
       $ID = mysqli_insert_id($dbcon);
@@ -72,12 +73,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Book Appointment</h1>
+            <h1>Book an Appointment</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Book Appointment</li>
+              <li class="breadcrumb-item active">Book an Appointment</li>
             </ol>
           </div>
         </div>
@@ -96,7 +97,7 @@
 <form method="post">
                 <div class="row">
                   <div class="col-md-3">
-                    <strong>Available Date:</strong>
+                    <strong>Appointment Date:</strong>
                   </div>
                   <div class="col-md-3">
                     <input type="date" name="available_date" class="form-control" required min="<?php echo date("Y-m-d");?>" value="<?php if(isset($_POST['save_btn'])): echo $_POST['available_date']; endif;?>" onkeydown="return false">
@@ -155,7 +156,7 @@
                             echo 'selected';
                           }
                         }
-                        ?>>I Dont request for dentist</option>
+                        ?>>Any dentist available</option>
                       <?php foreach ($doctor as $key => $value):?>
                         <option value="<?php echo $value->ID?>" <?php 
                         if(isset($_POST['save_btn'])){

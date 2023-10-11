@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><i class="fa fa-calendar-o"></i> My Appointments</h1>
+            <h1 class="m-0 text-dark"><i class="nav-icon fa fa-th"></i> Services</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             

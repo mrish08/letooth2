@@ -7,9 +7,11 @@
     header("Location: ../../index.php");
     exit;
   }
-  $customer = getSingleRow("COUNT(*) as total","UserRole","accounts","2");
-  $doctor = getSingleRow("COUNT(*) as total","UserRole","accounts","1");
-  $services = SingleQuery("COUNT(*) as total","services");
+  $pending = getSingleRow("COUNT(*) as total","sched_status","doctor_schedule","1");
+  $reserved = getSingleRow("COUNT(*) as total","sched_status","doctor_schedule","2");
+  $fulfilled = getSingleRow("COUNT(*) as total","sched_status","doctor_schedule","3");
+  $unpaid = getSingleRow("COUNT(*) as total","paypal_status","doctor_schedule","0");
+
   $sched = $dbcon->query("SELECT * FROM doctor_schedule WHERE sched_status != '4' OR sched_status != '0'") or die(mysqli_error());
   $count = mysqli_num_rows($sched);
 
@@ -65,9 +67,9 @@ if(isset($_GET['create_schedule'])){
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $customer['total']?></h3>
+                <h3><?php echo $pending['total']?></h3>
 
-                <p>Customer</p>
+                <p>Pending</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -80,9 +82,9 @@ if(isset($_GET['create_schedule'])){
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><?php echo $doctor['total']?></h3>
+                <h3><?php echo $reserved['total']?></h3>
 
-                <p>Dentist</p>
+                <p>Reserved</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -95,9 +97,9 @@ if(isset($_GET['create_schedule'])){
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><?php echo $services['total'];?></h3>
+                <h3><?php echo $fulfilled['total'];?></h3>
 
-                <p>Services</p>
+                <p>Fulfilled</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -110,9 +112,9 @@ if(isset($_GET['create_schedule'])){
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php echo $count;?></h3>
+                <h3><?php echo $unpaid['total'];?></h3>
 
-                <p>Schedule</p>
+                <p>Unpaid</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>

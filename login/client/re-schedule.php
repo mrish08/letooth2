@@ -18,6 +18,16 @@
 
     $check = $dbcon->query("SELECT * FROM doctor_schedule WHERE ID = '$doctor_id' AND available_date = '$available_date' AND (start_time < '$start_time' AND end_time > '$end_time')") or die(mysqli_error());
 
+    $today = date('Y-m-d');
+
+    $timestampDiff = strtotime($available_date) - strtotime($today);
+
+    $daysDifference = floor($timestampDiff / (60 * 60 * 24));
+
+    if ($daysDifference <= 3){
+      echo '<script>alert("Cannot reschedule 3 days or less than from the appointment schedule.");window.history.back();</script>';
+    }
+
     if(mysqli_num_rows($check) > 0){
       echo '<script>alert("Schedule between'.$from.' - '.$until.' on '.$available_date.' already exist.");window.location="book.php";</script>';
     }else{

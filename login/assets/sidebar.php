@@ -96,25 +96,19 @@ $count2 = mysqli_num_rows($sched2);
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link" style="color:white;">
+            <li class="nav-item">
+                <a href="pending.php" class="nav-link" style="color:white;">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Pending</p>
+                  <p>Pending Appointments <span class="right badge badge-danger"><?php echo $count;?></span></p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" style="color:white;">
+                <a href="approved.php" class="nav-link" style="color:white;">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Approved</p>
                 </a>
               </li>
               <?php if($_SESSION['ID'] == '1'):?>
-              <li class="nav-item">
-                <a href="#" class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>No Show</p>
-                </a>
-              </li>
             <?php endif;?>
             </ul>
           </li>
@@ -132,7 +126,7 @@ $count2 = mysqli_num_rows($sched2);
               <li class="nav-item">
                 <a href="customer.php" class="nav-link" style="color:white;">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Customer Profiles</p>
+                  <p>Client Profiles</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -165,12 +159,7 @@ $count2 = mysqli_num_rows($sched2);
                   <p>Services</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pending.php" class="nav-link" style="color:white;">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Pending Appointments <span class="right badge badge-danger"><?php echo $count;?></span></p>
-                </a>
-              </li>
+
              
 
             </ul>
@@ -227,14 +216,7 @@ $count2 = mysqli_num_rows($sched2);
   $query = $dbcon->query("SELECT * FROM inquiries WHERE client_id = '".$_SESSION['ID']."' AND inquiry_status = '0'") or die(mysqli_error());
   $count3 = mysqli_num_rows($query);
   ?>
-           <li class="nav-item">
-            <a href="read-msg.php" class="nav-link" style="color:white;">
-              <i class="nav-icon fa fa-envelope"></i>
-              <p>
-                Inquiries  <span class="right badge badge-danger"><?php echo $count2?></span>
-              </p>
-            </a>
-          </li>
+
           
   
           <li class="nav-item">
@@ -269,7 +251,7 @@ $count2 = mysqli_num_rows($sched2);
                 <a href="transactions.php" class="nav-link" style="color:white;">
               <i class="nav-icon fa fa-calendar"></i>
               <p>
-                On Going Appointments
+                Existing Appointments
               </p>
             </a>
               </li>
@@ -277,7 +259,7 @@ $count2 = mysqli_num_rows($sched2);
                 <a href="history.php" class="nav-link" style="color:white;">
               <i class="nav-icon fa fa-calendar-o"></i>
               <p>
-                History
+                Appointment History
               </p>
             </a>
               </li>
@@ -301,14 +283,6 @@ $count2 = mysqli_num_rows($sched2);
   $query = $dbcon->query("SELECT * FROM inquiries WHERE doctor_id = '".$_SESSION['ID']."' AND inquiry_status = '0'") or die(mysqli_error());
   $count2 = mysqli_num_rows($query);
   ?>
-  <li class="nav-item">
-            <a href="inquiry.php" class="nav-link" style="color:white;">
-              <i class="nav-icon fa fa-envelope"></i>
-              <p>
-                Inquiries <span class="right badge badge-danger"><?php echo $count2?></span>
-              </p>
-            </a>
-          </li>
           
   <li class="nav-item">
             <a href="appointment.php" class="nav-link" style="color:white;">
@@ -345,7 +319,7 @@ $count2 = mysqli_num_rows($sched2);
             <a href="history.php" class="nav-link" style="color:white;">
               <i class="nav-icon fa fa-calendar-o"></i>
               <p>
-                History
+                Appointment History
               </p>
             </a>
           </li>

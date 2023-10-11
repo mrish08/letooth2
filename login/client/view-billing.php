@@ -207,7 +207,6 @@
               <!-- /.row -->
 
               <!-- this row will not appear when printing -->
-            <!--
               <div class="row no-print">
                 <div class="col-6">
                 <?php if($getData['sched_status'] == '3'):?>
@@ -233,7 +232,6 @@
                <?php endif;?>
                   
                 </div>
-              -->
               </div>
             </div>
 

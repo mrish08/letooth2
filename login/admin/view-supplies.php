@@ -23,11 +23,8 @@ if(isset($_POST["asset_id"]))
 
     while($row = mysqli_fetch_array($result))
     {
-            $imageData = base64_encode($row['ASSET_PICTURE']);
-            $src = 'data:image/jpeg;base64,' . $imageData;
 
         $output .= '
-            <tr><td><strong>Photo of Supplies</strong></td><td><img src="' . $src . '" alt="Asset Image" width="100" height="100"></td></tr>
             <tr><td><strong>Name of Supplies</strong></td><td>'.$row['ASSET_NAME'].'</td></tr>
             <tr><td><strong>Description</strong><td>'.$row['ASSET_DESC'].'</td></tr>
             <tr><td><strong>Quantity</strong><td>'.$row['ASSET_QUANTITY'].'</td></tr>

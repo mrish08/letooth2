@@ -10,6 +10,7 @@
   $name = getSingleRow("*","ID","accounts",$_SESSION['ID']);
   $services = fetchAll("*","services");
   
+  
 ?>
 <?php include'../assets/header.php';?>
 <body class="hold-transition sidebar-mini">
@@ -77,7 +78,7 @@
                         <div class="timeline-item">
                           <span class="time"><i class="fa fa-clock-o"></i> <?php echo $value->date_created;?></span>
 
-                          <h3 class="timeline-header"><a href="#"><?php echo $value->service_name;?></a> <?php if($value->service_type == '0'): echo 'Surgical'; else: echo 'Non Surgical'; endif;?></h3>
+                          <h3 class="timeline-header"><a href="#"><?php echo $value->service_name;?></a> <?php if($value->category_name== '0'): echo 'Surgical'; else: echo 'Non Surgical'; endif;?></h3>
 
                           <div class="timeline-body">
                           <div class="row">

@@ -14,14 +14,13 @@ if ($dbcon->connect_error) {
 }
 
 // Assuming you have the image data as a file upload
-$picture = addslashes(file_get_contents($_FILES["fileToUpload"]["tmp_name"]));
 $name = $_POST["name"];
 $desc = $_POST["desc"];
 $qty = $_POST["qty"];
 
 
 // Prepare the SQL statement with placeholders
-$query = "INSERT INTO asset (ASSET_PICTURE, ASSET_NAME, ASSET_DESC, ASSET_QUANTITY, ASSET_TYPE) VALUES (?, ?, ?, ?, 1)";
+$query = "INSERT INTO asset (ASSET_NAME, ASSET_DESC, ASSET_QUANTITY, ASSET_TYPE) VALUES (?, ?, ?, 1)";
 
 // Create a prepared statement
 $stmt = $dbcon->prepare($query);
@@ -31,15 +30,13 @@ if (!$stmt) {
 }
 
 // Bind the variables to the placeholders
-$stmt->bind_param("bssi", $picture, $name, $desc, $qty);
+$stmt->bind_param("ssi", $name, $desc, $qty);
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    echo "Record inserted successfully.";
-    echo $picture;
+    echo "Equipment added successfully.";
 } else {
     echo "Error: " . $stmt->error;
-    echo $picture;
 }
 
 // Close the prepared statement and database connection

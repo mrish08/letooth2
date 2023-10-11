@@ -69,8 +69,8 @@
  <table id="example1" class="table table-bordered table-hover" style="font-size:13px;">
                 <thead>
                 <tr>
-                  <th>Photo</th>
                   <th>Name of Supplies</th>
+                  <th>Description</th>
                   <th>Quantity</th>
                   <th>Action</th>
                 </tr>
@@ -78,19 +78,8 @@
                 <tbody>
                 <?php foreach ($data as $key => $value):?>
                 <tr row-id="<?php echo $value['ASSET_ID']; ?>">
-                <td style="width: 20%">
-                <?php
-                        // Check if the ASSET_IMAGE column contains image data
-                        if (!empty($value['ASSET_PICTURE'])) {
-                            $imageData = base64_encode($value['ASSET_PICTURE']);
-                            $src = 'data:image/jpeg;base64,' . $imageData;
-                            echo '<img src="' . $src . '" alt="Asset Image" width="100" height="100">';
-                        } else {
-                            echo 'No Image';
-                        }
-                        ?>
-              </td>
-                <td><?php echo $value['ASSET_NAME'] ?></td>
+                <td style="width: 20%"><?php echo $value['ASSET_NAME'] ?></td>
+                <td><?php echo $value['ASSET_DESC'] ?></td>
                 <td><?php echo $value['ASSET_QUANTITY'] ?></td>
                 <td style="width: 10%">
                   <div>
@@ -144,10 +133,6 @@
               </div>
               <div class="modal-body">
                 <form method="POST" action=""> 
-                  <div class="mb-3">
-                  <label for="fileToUpload">InImage</label><br>
-                  <input type="file" id="fileToUpload" name="fileToUpload">
-                  </div>
                   <div class="mb-2">
                   <label for="asset_name">Name</label>
                   <input class="form-control" type="text" name="supply_name" id="supply_name">
@@ -228,7 +213,6 @@
     $('#submitBtn').click(function (){
 
         var formData = new FormData();
-        formData.append('fileToUpload', $('#fileToUpload')[0].files[0]); // Add the file object to FormData
         formData.append('name', $('#supply_name').val());
         formData.append('desc', $('#supply_desc').val());
         formData.append('qty', $('#supply_quantity').val());
