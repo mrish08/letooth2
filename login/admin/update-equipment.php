@@ -25,7 +25,8 @@ if(isset($_POST["asset_id"]))
 
         $output = '
         <div class="d-flex flex-column align-items-center">
-        <p class="text-bold">'.$row['ASSET_NAME'].'</p>
+        <label for="updateEquipmentName">Name</label>
+        <input class="form-control" type="text" name="updateEquipmentName" id="updateEquipmentName" value="'.$row['ASSET_NAME'].'">
         </div>
         <div class="mb-3">
         <label for="updateEquipmentQty">Quantity</label>

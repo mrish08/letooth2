@@ -262,6 +262,7 @@
     $('#updateSubmitBtn').click(function () {
     var updatedQty = $('#updateSupplyQty').val();
     var suppliesId = $('#updateSupplyId').val();
+    var updatedName = $('#updateSupplyName').val();
 
     console.log(updatedQty);
     console.log(suppliesId);
@@ -271,6 +272,7 @@
         method: 'POST',
         data: {
             newQty: updatedQty,
+            newName: updatedName,
             suppliesId: suppliesId
         },
         success: function (result) {

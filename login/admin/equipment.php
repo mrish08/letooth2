@@ -220,13 +220,15 @@ $(document).ready(function () {
   $('#updateSubmitBtn').click(function () {
     var updatedQty = $('#updateEquipmentQty').val();
     var equipmentId = $('#updateAssetId').val();
+    var updatedName = $('#updateEquipmentName').val()
 
     $.ajax({
         url: 'insert-updated-equipment.php',
         method: 'POST',
         data: {
             newQty: updatedQty,
-            equipId: equipmentId
+            equipId: equipmentId,
+            newName: updatedName
         },
         success: function (result) {
             alert(result);
